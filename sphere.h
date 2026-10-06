@@ -42,9 +42,10 @@ public:
                 return false;
         }
 
-        rec.t = root;                           // root - value of the parameter t
-        rec.p = r.at(rec.t);                    // the point visible to the camera
-        rec.normal = (rec.p - center) / radius; // unit normal vector at that point
+        rec.t = root;                                    // root - value of the parameter t
+        rec.p = r.at(rec.t);                             // the point visible to the camera
+        vec3 outward_normal = (rec.p - center) / radius; // normal vector at the point p
+        rec.set_face_normal(r, outward_normal);
 
         return true;
     }
