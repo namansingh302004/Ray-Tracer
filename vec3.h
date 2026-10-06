@@ -18,7 +18,7 @@ public:
 
     // unary and indexing operator overloading
     // negative of the entire vector
-    vec3 operator-() { return vec3(-e[0], -e[1], -e[2]); }
+    vec3 operator-() const { return vec3(-e[0], -e[1], -e[2]); }
 
     // indexing
     // 1. to not make any changes we use the const version
