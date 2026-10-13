@@ -11,10 +11,11 @@ class sphere : public hittable
 private:
     point3 center;
     double radius;
+    shared_ptr<material> mat;
 
 public:
     // constructor
-    sphere(const point3 &center, double radius) : center(center), radius(fmax(0, radius)) {}
+    sphere(const point3 &center, double radius, shared_ptr<material> mat) : center(center), radius(fmax(0, radius)), mat(mat) {}
 
     bool hit(const ray &r, interval ray_t, hit_record &rec) const override
     {
@@ -46,6 +47,7 @@ public:
         rec.p = r.at(rec.t);                             // the point visible to the camera
         vec3 outward_normal = (rec.p - center) / radius; // normal vector at the point p
         rec.set_face_normal(r, outward_normal);
+        rec.mat = mat;
 
         return true;
     }
