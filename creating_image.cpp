@@ -1,5 +1,4 @@
-#include "color.h"
-#include "vec3.h"
+#include "headers/color.h"
 #include <iostream>
 
 using namespace std;

@@ -5,4 +5,5 @@ project(SimpleRayTracer LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(SimpleRayTracer creating_image.cpp)
+add_executable(SimpleRayTracer main.cc)
+target_include_directories(SimpleRayTracer PRIVATE ${CMAKE_SOURCE_DIR})
