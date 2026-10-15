@@ -16,6 +16,9 @@ The renderer writes a PPM image to stdout. The included `image.ppm` is a
 1920 x 1080 render at 500 samples per pixel with 50 bounce depth.
 
 ---
+## Render Preview
+
+![Ray tracer render](images/ray-tracer.png)
 
 ## Features
 
