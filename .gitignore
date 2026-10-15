@@ -71,11 +71,3 @@ Thumbs.db
 *.swp
 *.swo
 *~
-
-# =========================
-# Ray tracer generated images
-# =========================
-*.ppm
-*.png
-*.jpg
-*.jpeg
